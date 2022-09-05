@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DependencyInversionPrinciple
 {
-    public class EmployeeDataAccess
-    {
-        public Employee getEmployeeDetails(int id)
+    public class EmployeeDataAccess : IEmployeeDataAccess
+    {      
+        public Employee GetEmployeeDetails(int id)
         {
             var emp = new Employee()
             {

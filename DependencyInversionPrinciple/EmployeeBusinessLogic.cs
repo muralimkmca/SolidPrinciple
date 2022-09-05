@@ -8,7 +8,7 @@ namespace DependencyInversionPrinciple
 {
     public class EmployeeBusinessLogic
     {
-        EmployeeDataAccess _EmployeeDataAccess;
+        IEmployeeDataAccess _EmployeeDataAccess;
         public EmployeeBusinessLogic()
         {
             _EmployeeDataAccess = EmployeeDataFactory.GetemployeeDataAccessById();
@@ -16,7 +16,7 @@ namespace DependencyInversionPrinciple
 
         public Employee GetEmployeeDetails(int id)
         {
-            return _EmployeeDataAccess.getEmployeeDetails(id);
+            return _EmployeeDataAccess.GetEmployeeDetails(id);
         }
 
     }

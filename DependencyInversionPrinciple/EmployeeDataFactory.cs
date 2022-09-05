@@ -8,7 +8,7 @@ namespace DependencyInversionPrinciple
 {
     public class EmployeeDataFactory
     {
-        public static EmployeeDataAccess GetemployeeDataAccessById()
+        public static IEmployeeDataAccess GetemployeeDataAccessById()
         {
             return new EmployeeDataAccess();
         }
